@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cloud-Meds Master Class: Registration</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{--bg:#03080f;--bg-2:#071426;--ink:#eaf2ff;--muted:#8ea2c2;--teal:#2dd4bf;--blue:#5b8def;--violet:#8b7bff;--danger:#fb7185;--line:rgba(142,162,194,.16);--glass:rgba(10,22,42,.62)}
+*{box-sizing:border-box} [hidden]{display:none!important} html{scroll-behavior:smooth} body{margin:0;min-height:100vh;overflow-x:hidden;font-family:"Inter",system-ui,sans-serif;color:var(--ink);line-height:1.6;background:radial-gradient(900px 600px at 85% -10%,rgba(45,212,191,.12),transparent 60%),radial-gradient(900px 700px at -10% 40%,rgba(91,141,239,.14),transparent 60%),linear-gradient(180deg,var(--bg),var(--bg-2))}
+h1,h2,h3{font-family:"Space Grotesk",system-ui,sans-serif;letter-spacing:-.025em;margin:0}a{color:var(--teal)}:focus-visible{outline:3px solid rgba(45,212,191,.55);outline-offset:3px;border-radius:6px}
+.hero{position:relative;min-height:88vh;display:grid;align-items:center;padding:96px 0 72px;overflow:hidden}#helix{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}.hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,transparent 60%,var(--bg-2) 100%)}.wrap{position:relative;z-index:2;max-width:1180px;width:100%;margin:0 auto;padding:0 28px}.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--teal);padding:7px 14px;border:1px solid rgba(45,212,191,.35);border-radius:999px;background:rgba(45,212,191,.06)}.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 12px var(--teal)}.hero h1{font-size:clamp(42px,7.4vw,96px);line-height:.98;font-weight:700;margin:26px 0 22px;max-width:13ch}.grad{background:linear-gradient(95deg,var(--teal) 10%,var(--blue) 55%,var(--violet) 95%);background-clip:text;-webkit-background-clip:text;color:transparent}.hero .lead{font-size:clamp(17px,1.9vw,20px);color:var(--muted);max-width:580px;margin:0 0 34px}.hero-meta{display:flex;flex-wrap:wrap;gap:12px}.chip{display:inline-flex;align-items:center;gap:10px;padding:11px 16px;border-radius:14px;background:rgba(10,22,42,.6);border:1px solid var(--line);font-size:14px;backdrop-filter:blur(8px)}.chip b{font-weight:600}.chip small{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.12em;display:block;line-height:1.2}.scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;font-size:12px;color:var(--muted);letter-spacing:.2em;text-transform:uppercase}
+.organiser{display:inline-flex;align-items:center;gap:14px;margin:0 0 22px;padding:14px 20px;max-width:640px;border-radius:16px;border:1px solid rgba(45,212,191,.35);background:linear-gradient(95deg,rgba(45,212,191,.10),rgba(91,141,239,.10));font-size:clamp(15px,1.7vw,18px);font-weight:600;line-height:1.4}.organiser svg{width:26px;height:26px;flex-shrink:0}.chip.must{border-color:rgba(45,212,191,.55);background:rgba(45,212,191,.10)}.notice{display:flex;gap:12px;align-items:flex-start;margin:0 0 18px;padding:14px 16px;border-radius:14px;border:1px solid rgba(45,212,191,.5);background:rgba(45,212,191,.08);font-size:14.5px;line-height:1.5}.notice svg{width:22px;height:22px;flex-shrink:0;margin-top:1px}
+.logo-bar{display:flex;flex-wrap:nowrap;justify-content:center;align-items:center;gap:18px;margin:0 auto 44px}.logo-bar .logo-box{flex:1 1 0;min-width:0;max-width:290px;height:140px;padding:12px 16px;border-radius:18px;box-shadow:0 18px 40px -18px rgba(0,0,0,.65)}.about{margin-bottom:48px}.about-intro{max-width:760px;margin-bottom:28px}.about-intro h2{font-size:clamp(28px,4vw,40px);margin-bottom:12px}.about-intro p{color:var(--muted);margin:0 0 10px}.about-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}.org{display:grid;gap:18px;align-content:start;text-align:center}.org h3{font-size:17px;margin:0 0 6px}.org p{margin:0;color:var(--muted);font-size:14px}.org .role{display:inline-block;margin-bottom:8px;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}.logo-box{height:170px;display:flex;align-items:center;justify-content:center;padding:14px 18px;border-radius:18px;box-shadow:0 14px 34px -18px rgba(0,0,0,.6);background:#fff;overflow:hidden}.logo-box img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}.logo-box .logo-fallback{display:none;color:#0b1a30;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:15px;text-align:center;line-height:1.25}.logo-box.nologo img{display:none}.logo-box.nologo .logo-fallback{display:block}.logo-strip{display:flex;flex-wrap:nowrap;justify-content:center;gap:16px;margin-top:8px}.logo-strip .logo-box{flex:1 1 0;min-width:0;max-width:250px;height:120px;padding:10px 14px}
+.main{padding:40px 28px 96px}.layout{display:grid;grid-template-columns:360px minmax(0,1fr);gap:48px;align-items:start}.side{position:sticky;top:28px;display:grid;gap:18px}.panel{background:var(--glass);border:1px solid var(--line);border-radius:24px;padding:26px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}.panel h3{font-size:18px;margin-bottom:10px}.panel p{color:var(--muted);margin:0;font-size:14.5px}.ring-wrap{display:flex;align-items:center;gap:20px}.ring{width:92px;height:92px;flex-shrink:0}.ring circle{fill:none;stroke-width:8}.ring .track{stroke:rgba(142,162,194,.15)}.ring .bar{stroke:url(#ringGrad);stroke-linecap:round;transition:stroke-dashoffset .6s ease}.ring text{font-family:"Space Grotesk",sans-serif;font-size:20px;font-weight:700;fill:var(--ink)}.ring-text strong{font-family:"Space Grotesk",sans-serif;font-size:17px;display:block}.ring-text span{color:var(--muted);font-size:13.5px}.steps{list-style:none;padding:0;margin:0;display:grid;gap:4px}.steps li{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;color:var(--muted);font-size:14.5px;transition:background .25s,color .25s}.steps li .dot{width:22px;height:22px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:11px;font-weight:700;flex-shrink:0}.steps li.done{color:var(--ink)}.steps li.done .dot{background:var(--teal);border-color:var(--teal);color:#03210f}.steps li.current{background:rgba(45,212,191,.08);color:var(--ink)}.facts-list{display:grid;gap:14px}.facts-list div{display:flex;justify-content:space-between;gap:14px;font-size:14.5px;border-bottom:1px dashed var(--line);padding-bottom:12px}.facts-list div:last-child{border-bottom:0;padding-bottom:0}.facts-list span{color:var(--muted)}.facts-list strong{text-align:right;font-weight:600}
+form{display:grid;gap:22px}.section{background:var(--glass);border:1px solid var(--line);border-radius:24px;padding:32px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);scroll-margin-top:28px}.section-head{display:flex;gap:16px;align-items:center;margin-bottom:26px}.section-head .num{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;flex-shrink:0;font-family:"Space Grotesk",sans-serif;font-weight:700;color:#03140f;background:linear-gradient(135deg,var(--teal),var(--blue))}.section-head h2{font-size:24px}.section-head p{margin:2px 0 0;color:var(--muted);font-size:14px}.q-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:26px}.q-row .q{margin-bottom:0}.other-input{margin-top:12px}.q{margin-bottom:26px;min-width:0}.q:last-child{margin-bottom:0}.q-label{display:block;font-weight:600;font-size:15.5px;margin-bottom:4px}.req{color:var(--teal);margin-left:4px}.opt-tag{color:var(--muted);font-weight:400;font-size:13px;margin-left:6px}.q-hint{color:var(--muted);font-size:13px;margin:0 0 12px}input[type=text],input[type=email],textarea{width:100%;font:inherit;font-size:15.5px;color:var(--ink);background:rgba(3,8,15,.6);border:1px solid rgba(142,162,194,.25);border-radius:14px;padding:14px 16px;transition:border-color .2s,box-shadow .2s,background .2s}input::placeholder,textarea::placeholder{color:rgba(142,162,194,.7)}textarea{min-height:110px;resize:vertical}input:hover,textarea:hover{border-color:rgba(142,162,194,.45)}input:focus,textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px rgba(45,212,191,.14);background:rgba(3,8,15,.85)}.invalid{border-color:var(--danger)!important}.err{color:var(--danger);font-size:13px;margin-top:8px}.err:empty{margin:0}.choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:10px}.choice{position:relative;cursor:pointer}.choice input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}.choice span{display:flex;align-items:center;gap:12px;height:100%;padding:13px 15px;border-radius:14px;border:1px solid rgba(142,162,194,.2);background:rgba(3,8,15,.45);font-size:15px;line-height:1.35;transition:transform .18s,border-color .2s,background .2s,box-shadow .2s}.choice span::before{content:"";width:18px;height:18px;flex-shrink:0;border-radius:6px;border:1.5px solid rgba(142,162,194,.5);transition:all .2s}.choice input[type=radio]+span::before{border-radius:50%}.choice:hover span{transform:translateY(-2px);border-color:rgba(45,212,191,.55)}.choice input:checked+span{border-color:var(--teal);background:rgba(45,212,191,.1);box-shadow:0 10px 30px -14px rgba(45,212,191,.6)}.choice input:checked+span::before{background:var(--teal);border-color:var(--teal);box-shadow:inset 0 0 0 4px #03140f}.choice input:focus-visible+span{outline:3px solid var(--teal);outline-offset:3px}.choice input:disabled+span{opacity:.38;cursor:not-allowed;transform:none}.consent{display:grid;gap:16px}.agree{display:grid;grid-template-columns:22px 1fr;gap:14px;align-items:start;font-size:15px;line-height:1.55;cursor:pointer}.agree input{width:22px;height:22px;margin:2px 0 0;accent-color:var(--teal);cursor:pointer}
+.submit-bar{position:sticky;bottom:18px;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:16px 16px 16px 24px;border-radius:22px;background:rgba(6,14,28,.85);border:1px solid var(--line);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 24px 50px -20px rgba(0,0,0,.7)}.status{font-size:14px;color:var(--muted);flex:1 1 180px}.status.error{color:var(--danger)}button{font:inherit;font-weight:600;font-size:16px;border:0;cursor:pointer;border-radius:999px;padding:15px 32px;color:#03140f;background:linear-gradient(95deg,var(--teal),var(--blue));box-shadow:0 14px 40px -12px rgba(45,212,191,.65);transition:transform .2s,box-shadow .2s,opacity .2s}button:hover{transform:translateY(-2px);box-shadow:0 18px 50px -12px rgba(45,212,191,.75)}button:disabled{opacity:.55;cursor:wait;transform:none}button.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}button.ghost:hover{border-color:var(--teal)}.success{display:none;text-align:center;padding:72px 36px}.success.show{display:block;animation:rise .7s cubic-bezier(.2,.7,.2,1) both}.check{width:84px;height:84px;margin:0 auto 24px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--teal),var(--blue));box-shadow:0 0 60px rgba(45,212,191,.45)}.check svg{width:40px;height:40px}.success h2{font-size:clamp(30px,4.5vw,46px);margin-bottom:14px}.success p{color:var(--muted);max-width:520px;margin:0 auto 26px}.reg-id{display:inline-block;font-family:monospace;color:var(--teal);border:1px dashed rgba(45,212,191,.5);border-radius:10px;padding:8px 16px;margin-bottom:26px;overflow-wrap:anywhere}.success-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}footer{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;line-height:1.7;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.reveal{opacity:1;transform:none}.animate-reveal .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}.animate-reveal .reveal.in{opacity:1;transform:none}.skip-link{position:absolute;left:12px;top:-100px;z-index:20;background:var(--bg-2);padding:12px}.skip-link:focus{top:12px}
+@media(max-width:1100px){.about-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:960px){.layout{grid-template-columns:minmax(0,1fr);gap:28px}.side{position:static;grid-template-columns:1fr}.submit-bar{position:static}}
+@media(max-width:700px){.logo-bar{gap:8px}.logo-bar .logo-box{height:78px;padding:6px 8px;border-radius:12px}.logo-bar .logo-fallback{font-size:10px}.logo-strip{gap:8px}.logo-strip .logo-box{height:70px;padding:6px 8px}.logo-strip .logo-fallback{font-size:10px}}
+@media(max-width:560px){.wrap{padding-left:18px;padding-right:18px}.section{padding:24px 20px;border-radius:20px}.about-grid,.q-row,.choices{grid-template-columns:minmax(0,1fr)}.submit-bar{padding:16px}.submit-bar button{width:100%}.scroll-cue{display:none}.hero{padding-top:40px}.success{padding:40px 20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.animate-reveal .reveal{opacity:1;transform:none;transition:none}.success.show{animation:none}button,.choice span,.choice span::before,.ring .bar,.steps li{transition:none}button:hover,.choice:hover span{transform:none}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#regForm">Skip to registration</a>
+<header class="hero">
+<canvas id="helix" aria-hidden="true"></canvas>
+<div class="wrap">
+<div class="logo-bar" data-logo-strip aria-label="Organisers and partners"></div>
+<span class="eyebrow"><i aria-hidden="true"></i>AGYA Master Class · Tunis</span>
+<h1>Cloud-Meds: <span class="grad">AI drug repurposing</span> for rare genetic diseases</h1>
+<div class="organiser"><svg viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg><span>Organised by the Institut Pasteur de Tunis (IPT), funded by the Arab-German Young Academy of Sciences and Humanities (AGYA)</span></div>
+<p class="lead">Two days in Tunis exploring how artificial intelligence and cloud computing can speed up the search for treatments for people living with rare genetic diseases.</p>
+<div class="hero-meta"><div class="chip"><div><small>Dates</small><b>3–4 December 2026</b></div></div><div class="chip"><div><small>Venue</small><b>City of Sciences, Tunis</b></div></div><div class="chip"><div><small>Language</small><b>English</b></div></div><div class="chip must"><div><small>Required</small><b>Personal laptop is mandatory</b></div></div></div>
+</div><div class="scroll-cue">Register below</div>
+</header>
+<main class="main wrap">
+<noscript><div class="notice">JavaScript is needed for this registration page. Enable JavaScript and reload the page.</div></noscript>
+<section class="about reveal" id="about" aria-labelledby="aboutTitle">
+<div class="about-intro"><h2 id="aboutTitle">About the master class</h2><p>Cloud-Meds is a two-day, hands-on master class on how artificial intelligence and cloud computing can accelerate drug repurposing for rare genetic diseases. Through talks and practical sessions, participants work with real computational workflows and meet researchers from across the Arab region and Germany.</p><p>The master class is organised by the Institut Pasteur de Tunis (IPT) and funded by the Arab-German Young Academy of Sciences and Humanities (AGYA). <strong>Participants must bring their own laptop.</strong></p></div>
+<div class="about-grid">
+<div class="panel org"><div data-logo="ipt"></div><div><span class="role">Organiser</span><h3>Institut Pasteur de Tunis (IPT)</h3><p>A leading Tunisian public health and biomedical research institute, part of the international Pasteur Network.</p></div></div>
+<div class="panel org"><div data-logo="agya"></div><div><span class="role">Funder</span><h3>Arab-German Young Academy of Sciences and Humanities (AGYA)</h3><p>An academy of outstanding early-career researchers from the Arab region and Germany, promoting interdisciplinary and international collaboration.</p></div></div>
+<div class="panel org"><div data-logo="hzi"></div><div><span class="role">Partner</span><h3>Helmholtz Institute for Pharmaceutical Research Saarland (HIPS)</h3><p>A Helmholtz institute in Saarbrücken, Germany, focused on drug discovery and the development of new anti-infective therapies.</p></div></div>
+<div class="panel org"><div data-logo="city"></div><div><span class="role">Venue</span><h3>City of Sciences, Tunis</h3><p>Host venue of the master class, 3–4 December 2026.</p></div></div>
+</div>
+</section>
+<div class="layout">
+<aside class="side">
+<div class="panel"><div class="ring-wrap"><svg class="ring" viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="ringGrad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#8b7bff"/></linearGradient></defs><circle class="track" cx="50" cy="50" r="42"/><circle class="bar" id="ringBar" cx="50" cy="50" r="42" stroke-dasharray="263.9" stroke-dashoffset="263.9" transform="rotate(-90 50 50)"/><text x="50" y="56" text-anchor="middle" id="ringPct">0%</text></svg><div class="ring-text"><strong>Your progress</strong><span id="ringMsg">Start with your details</span></div></div></div>
+<div class="panel"><h3>Registration steps</h3><ol class="steps" id="stepList"><li data-step="0"><span class="dot">1</span>About you</li><li data-step="1"><span class="dot">2</span>Your background</li><li data-step="2"><span class="dot">3</span>Getting ready</li><li data-step="3"><span class="dot">4</span>Agreement</li></ol></div>
+<div class="panel"><h3>At a glance</h3><div class="facts-list"><div><span>Format</span><strong>Interactive master class</strong></div><div><span>Focus</span><strong>AI, bioinformatics, cloud</strong></div><div><span>For</span><strong>PhD, researchers, clinicians, industry</strong></div><div><span>Organised by</span><strong>Institut Pasteur de Tunis (IPT)</strong></div><div><span>Funded by</span><strong>Arab-German Young Academy of Sciences and Humanities (AGYA)</strong></div><div><span>Requirement</span><strong>Own laptop is mandatory</strong></div></div></div>
+</aside>
+<div>
+<div class="notice" id="previewNotice" hidden><span><strong>Preview mode.</strong> You can try the form here, but no registration will be sent. Live submission and your uploaded logos are enabled when this page is published on your github.io website.</span></div>
+<form id="regForm" novalidate>
+<section class="section reveal" data-section="0" aria-labelledby="section0"><div class="section-head"><div class="num">01</div><div><h2 id="section0">About you</h2><p>The basics so we know who is joining us.</p></div></div>
+<div class="q-row"><div class="q"><label class="q-label" for="firstName">Name<span class="req">*</span></label><input type="text" id="firstName" name="firstName" autocomplete="given-name" placeholder="Your first name" maxlength="120" aria-required="true" aria-describedby="err-firstName"/><div class="err" id="err-firstName" data-err="firstName"></div></div><div class="q"><label class="q-label" for="lastName">Surname<span class="req">*</span></label><input type="text" id="lastName" name="lastName" autocomplete="family-name" placeholder="Your family name" maxlength="120" aria-required="true" aria-describedby="err-lastName"/><div class="err" id="err-lastName" data-err="lastName"></div></div></div>
+<div class="q"><label class="q-label" for="email">Email address<span class="req">*</span></label><input type="email" id="email" name="email" autocomplete="email" placeholder="you@institution.org" maxlength="254" aria-required="true" aria-describedby="err-email"/><div class="err" id="err-email" data-err="email"></div></div>
+<div class="q"><span class="q-label" id="label-role">Current role<span class="req">*</span></span><div class="choices" data-group="role" data-name="role" role="radiogroup" aria-labelledby="label-role" aria-required="true" aria-describedby="err-role"></div><input type="text" id="roleOther" class="other-input" maxlength="120" placeholder="Please specify your role" aria-label="Please specify your role" aria-describedby="err-roleOther" hidden/><div class="err" id="err-role" data-err="role"></div><div class="err" id="err-roleOther" data-err="roleOther"></div></div>
+<div class="q"><span class="q-label" id="label-field">Primary field<span class="req">*</span></span><div class="choices" data-group="field" data-name="field" role="radiogroup" aria-labelledby="label-field" aria-required="true" aria-describedby="err-field"></div><div class="err" id="err-field" data-err="field"></div></div>
+</section>
+<section class="section reveal" data-section="1" aria-labelledby="section1"><div class="section-head"><div class="num">02</div><div><h2 id="section1">Your background</h2><p>Helps us tailor the practical sessions.</p></div></div>
+<div class="q"><span class="q-label" id="label-coding">Coding experience<span class="req">*</span></span><div class="choices" data-group="coding" data-name="coding" role="radiogroup" aria-labelledby="label-coding" aria-required="true" aria-describedby="err-coding"></div><div class="err" id="err-coding" data-err="coding"></div></div>
+<div class="q"><span class="q-label" id="label-ai">AI for drug discovery<span class="req">*</span></span><div class="choices" data-group="ai" data-name="ai" role="radiogroup" aria-labelledby="label-ai" aria-required="true" aria-describedby="err-ai"></div><div class="err" id="err-ai" data-err="ai"></div></div>
+<div class="q"><span class="q-label" id="label-cloud">Cloud computing experience<span class="req">*</span></span><div class="choices" data-group="cloud" data-name="cloud" role="radiogroup" aria-labelledby="label-cloud" aria-required="true" aria-describedby="err-cloud"></div><div class="err" id="err-cloud" data-err="cloud"></div></div>
+<div class="q"><span class="q-label" id="label-excite">What excites you most?<span class="req">*</span><span class="opt-tag">choose up to three</span></span><div class="choices" data-group="excite" data-name="excite" data-max="3" role="group" aria-labelledby="label-excite" aria-describedby="err-excite"></div><div class="err" id="err-excite" data-err="excite"></div></div>
+<div class="q"><label class="q-label" for="challenge">A scientific challenge you would solve with AI<span class="opt-tag">optional</span></label><textarea id="challenge" name="challenge" maxlength="600" placeholder="A sentence or two is plenty."></textarea></div>
+</section>
+<section class="section reveal" data-section="2" aria-labelledby="section2"><div class="section-head"><div class="num">03</div><div><h2 id="section2">Getting ready</h2><p>So we can plan the practical sessions.</p></div></div>
+<div class="q"><div class="notice" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg><span><strong>A personal laptop is mandatory.</strong> All practical sessions are hands-on, so every participant must bring their own computer.</span></div><span class="q-label" id="label-laptop">Laptop confirmation<span class="req">*</span></span><div class="choices" data-group="laptop" data-name="laptop" role="radiogroup" aria-labelledby="label-laptop" aria-required="true" aria-describedby="err-laptop"></div><div class="err" id="err-laptop" data-err="laptop"></div></div>
+<div class="q"><span class="q-label" id="label-days">Which days can you attend?<span class="req">*</span></span><div class="choices" data-group="days" data-name="days" role="radiogroup" aria-labelledby="label-days" aria-required="true" aria-describedby="err-days"></div><div class="err" id="err-days" data-err="days"></div></div>
+<div class="q"><label class="q-label" for="notes">Anything else?<span class="opt-tag">optional</span></label><textarea id="notes" name="notes" maxlength="600" placeholder="A question for the trainers, or a topic you would love to see covered."></textarea></div>
+</section>
+<section class="section reveal" data-section="3" aria-labelledby="section3"><div class="section-head"><div class="num">04</div><div><h2 id="section3">Agreement</h2><p>Please review and confirm before submitting.</p></div></div>
+<div class="consent"><label class="agree"><input type="checkbox" id="terms" name="terms" aria-required="true" aria-describedby="err-terms"/><span>I have read and agree to Google's <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>, and I agree that the organisers may use my information to manage my registration.<span class="req">*</span></span></label><div class="err" id="err-terms" data-err="terms"></div><label class="agree"><input type="checkbox" id="photo" name="photo" aria-required="true" aria-describedby="err-photo"/><span>I agree to the creation and publication of photographs and video recordings of the event.<span class="req">*</span></span></label><div class="err" id="err-photo" data-err="photo"></div></div>
+</section>
+<div class="submit-bar"><div class="status" id="status" role="status" aria-live="polite">Complete the form to register.</div><button type="submit" id="submitBtn">Submit registration</button></div>
+</form>
+<section class="section success" id="success" aria-live="polite" tabindex="-1" aria-labelledby="resultTitle"><div class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#03140f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4m-5 5 5-5 5 5M5 15v5h14v-5"/></svg></div><h2 id="resultTitle">Registration request sent</h2><p id="resultMessage">Your browser has sent a registration request. This page cannot verify that Google accepted or saved it. Your registration is not confirmed here; please await confirmation from the organisers. Keep a copy of your answers and remember to bring your own laptop.</p><div class="reg-id" id="regId"></div><div class="success-actions"><button type="button" class="ghost" id="downloadCsv">Download my answers (CSV)</button><button type="button" class="ghost" id="backToForm" hidden>Back to preview form</button></div></section>
+<footer><div style="flex-basis:100%"><div class="logo-strip" data-logo-strip></div></div><span><strong>Organised by the Institut Pasteur de Tunis (IPT), funded by the Arab-German Young Academy of Sciences and Humanities (AGYA).</strong> A personal laptop is mandatory for all participants.</span><span>Responses are used only to manage registration for this event. Photographs and video may be taken for documentation and communication.</span></footer>
+</div></div>
+</main>
+<script>
+(() => {
+  'use strict';
+  // Google Forms configuration: all entries are Short answer, except
+  // Challenge and Notes (Paragraph). Turn off automatic email collection.
+  // Keep Notes and Challenge optional. Edit Photo consent to Short answer
+  // without deleting/recreating the question, so its entry ID stays valid.
+  const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSdLyEACIs3OuvuqiRolJafIEVm8eaXfsv3DT58BflNGZ9FXtw/formResponse';
+  const GOOGLE_FORM_ENTRIES = {
+    registrationId: 'entry.1640667670',
+    firstName: 'entry.1557776875',
+    lastName: 'entry.2018773004',
+    email: 'entry.1425573121',
+    role: 'entry.2106542110',
+    field: 'entry.1509537812',
+    coding: 'entry.766391159',
+    aiExperience: 'entry.2081310970',
+    cloudExperience: 'entry.825425977',
+    excites: 'entry.97435554',
+    challenge: 'entry.1082071171',
+    laptop: 'entry.1817015202',
+    days: 'entry.1345493016',
+    notes: 'entry.1838109837',
+    consentTerms: 'entry.1936979692',
+    consentPhoto: 'entry.175231832'
+  };
+  // No Apps Script fallback: responses only go to the configured Google Form.
+  // Preview/local files do not send data. Publish on GitHub Pages to enable
+  // live submissions. For a custom domain, add its exact hostname here.
+  const CUSTOM_LIVE_HOSTS = [];
+  const live = location.protocol === 'https:' && (location.hostname.endsWith('.github.io') || CUSTOM_LIVE_HOSTS.includes(location.hostname));
+  const $ = s => document.querySelector(s);
+  const $$ = s => [...document.querySelectorAll(s)];
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  const scrollMode = () => motion.matches ? 'auto' : 'smooth';
+  $('#previewNotice').hidden = live;
+  if (!live) $('#submitBtn').textContent = 'Try preview submission';
+
+  // Original logo paths are retained for the deployed site. Without the
+  // uploaded images (including in this preview), accessible text is shown.
+  const logos = {
+    agya: {path:'logos/agya.png', label:'AGYA'},
+    ipt: {path:'logos/ipt.jpeg', label:'Institut Pasteur de Tunis'},
+    hzi: {path:'logos/hzi.png', label:'HIPS'},
+    city: {path:'logos/city.jpeg', label:'City of Sciences, Tunis'}
+  };
+  function fillLogo(box, key) {
+    const info = logos[key];
+    box.classList.add('logo-box', 'nologo');
+    const text = document.createElement('span'); text.className = 'logo-fallback'; text.textContent = info.label; box.append(text);
+    if (live) {
+      const img = document.createElement('img'); img.alt = info.label + ' logo';
+      img.onload = () => box.classList.remove('nologo');
+      img.onerror = () => box.classList.add('nologo');
+      box.prepend(img); img.src = info.path;
+    }
+  }
+  $$('[data-logo]').forEach(box => fillLogo(box, box.dataset.logo));
+  $$('[data-logo-strip]').forEach(strip => Object.keys(logos).forEach(key => {const box = document.createElement('div'); fillLogo(box,key); strip.append(box);}));
+
+  // DNA helix hero; respects reduced motion and pauses in background tabs.
+  const cv = $('#helix'), cx = cv.getContext('2d');
+  let W=0, H=0, phase=0, frame=0;
+  function sizeHelix() {
+    if (!cx) return;
+    const dpr=Math.min(devicePixelRatio || 1,2), r=cv.getBoundingClientRect();
+    W=r.width; H=r.height; cv.width=Math.round(W*dpr); cv.height=Math.round(H*dpr); cx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  function drawHelix() {
+    if (!cx) return;
+    cx.clearRect(0,0,W,H);
+    const centerX=W>900?W*.78:W*.5, amp=Math.min(W*.16,170), gap=H/46, t=motion.matches?0:phase;
+    for(let i=0;i<=46;i++) {
+      const y=i*gap, a=i*.32+t, x1=centerX+Math.sin(a)*amp, x2=centerX-Math.sin(a)*amp, d=Math.cos(a);
+      cx.strokeStyle=`rgba(91,141,239,${.10+.08*Math.abs(Math.sin(a))})`; cx.lineWidth=1;
+      cx.beginPath(); cx.moveTo(x1,y); cx.lineTo(x2,y); cx.stroke();
+      [[x1,d,'45,212,191'],[x2,-d,'139,123,255']].forEach(([x,depth,rgb])=>{cx.fillStyle=`rgba(${rgb},${.35+(depth+1)*.3})`;cx.beginPath();cx.arc(x,y,2.2+(depth+1)*2.2,0,Math.PI*2);cx.fill();});
+    }
+    if(!motion.matches && !document.hidden){phase+=.012;frame=requestAnimationFrame(drawHelix);}
+  }
+  function restartHelix(){cancelAnimationFrame(frame);sizeHelix();drawHelix();}
+  restartHelix(); addEventListener('resize',restartHelix); document.addEventListener('visibilitychange',restartHelix); motion.addEventListener('change',restartHelix);
+
+  const options = {
+    role: ['Student','PhD student or researcher','Academic or university lecturer','AI, data science or bioinformatics professional','Healthcare or biomedical professional','Other'],
+    field: ['Genetics and genomics','AI and machine learning','Bioinformatics and computational biology','Drug discovery and pharmacology','Medicine and biomedical sciences','Exploring a new field'],
+    coding: ['Beginner: I am here to learn','Intermediate: I have written some code','Advanced: I build computational solutions','I work with other tools and approaches'],
+    ai: ['I have worked on a related project','I know the theory and want more practice','I have heard of it and want to learn more','Not yet, but I am excited to start'],
+    cloud: ['I have used cloud platforms for research','I have tried tools such as Google Colab','I know the basics and need practice','Completely new to me'],
+    excite: ['AI and machine learning for drug repurposing','Genomics and rare genetic diseases','Finding new uses for existing drugs','Biological networks and knowledge graphs','Cloud computing for biomedical research','Hands-on computational experiments','Meeting researchers and building collaborations'],
+    laptop: ['Yes, I confirm I will bring my own laptop'],
+    days: ['Both days: 3 and 4 December','3 December only','4 December only','Not confirmed yet']
+  };
+  $$('[data-group]').forEach(group=>{
+    options[group.dataset.group].forEach((text,i)=>{
+      const label=document.createElement('label');label.className='choice';
+      const input=document.createElement('input');input.type=group.dataset.max?'checkbox':'radio';input.name=group.dataset.name;input.value=text;input.id=group.dataset.name+'-'+i;input.setAttribute('aria-describedby','err-'+group.dataset.name);
+      const span=document.createElement('span');span.textContent=text;label.append(input,span);group.append(label);
+    });
+  });
+  const checked = name => $$(`input[name="${name}"]:checked`).map(e=>e.value);
+  const isOther = () => checked('role').includes('Other');
+  function setErr(key,msg) {
+    const el=$(`[data-err="${key}"]`);if(el)el.textContent=msg;
+    const field=document.getElementById(key) || $(`[data-name="${key}"]`);
+    if(field){field.classList.toggle('invalid',!!msg);field.setAttribute('aria-invalid',String(!!msg));}
+  }
+  $$('input[name="excite"]').forEach(inp=>inp.addEventListener('change',()=>{
+    const n=checked('excite').length;$$('input[name="excite"]').forEach(i=>{i.disabled=n>=3&&!i.checked;});setErr('excite','');
+  }));
+  $$('input[name="role"]').forEach(r=>r.addEventListener('change',()=>{
+    const box=$('#roleOther');box.hidden=!isOther();setErr('roleOther','');
+    if(isOther())box.focus();else box.value='';
+  }));
+  const REQUIRED_DONE={
+    firstName:()=>$('#firstName').value.trim().length>0,
+    lastName:()=>$('#lastName').value.trim().length>0,
+    email:()=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($('#email').value.trim()),
+    role:()=>checked('role').length>0&&(!isOther()||$('#roleOther').value.trim().length>0),
+    field:()=>checked('field').length>0,
+    coding:()=>checked('coding').length>0,
+    ai:()=>checked('ai').length>0,
+    cloud:()=>checked('cloud').length>0,
+    excite:()=>checked('excite').length>0&&checked('excite').length<=3,
+    laptop:()=>checked('laptop').length>0,
+    days:()=>checked('days').length>0,
+    terms:()=>$('#terms').checked,
+    photo:()=>$('#photo').checked
+  };
+  const SECTION_KEYS=[['firstName','lastName','email','role','field'],['coding','ai','cloud','excite'],['laptop','days'],['terms','photo']];
+  let busy=false, lastData=null, pendingId=null;
+  function updateProgress(){
+    const keys=Object.keys(REQUIRED_DONE),done=keys.filter(k=>REQUIRED_DONE[k]()).length,pct=Math.round(done/keys.length*100);
+    $('#ringBar').style.strokeDashoffset=(263.9*(1-pct/100)).toFixed(1);$('#ringPct').textContent=pct+'%';
+    $('#ringMsg').textContent=pct===100?'Ready to submit':pct<40?'Start with your details':'Almost there';
+    SECTION_KEYS.forEach((group,i)=>$(`#stepList li[data-step="${i}"]`).classList.toggle('done',group.every(k=>REQUIRED_DONE[k]())));
+    if(!busy){$('#status').className='status';$('#status').textContent=pct===100?(live?'All required fields are complete.':'Ready to preview. No registration will be sent.'):'Complete the form to register.';}
+  }
+  $('#regForm').addEventListener('input',updateProgress);$('#regForm').addEventListener('change',updateProgress);updateProgress();
+  if('IntersectionObserver' in window){
+    const sectionIO=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)$$('#stepList li').forEach(li=>li.classList.toggle('current',li.dataset.step===e.target.dataset.section));}),{rootMargin:'-40% 0px -50% 0px'});
+    $$('[data-section]').forEach(s=>sectionIO.observe(s));
+    if(!motion.matches){
+      document.documentElement.classList.add('animate-reveal');
+      const revealIO=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');revealIO.unobserve(e.target);}}),{threshold:.02});
+      $$('.reveal').forEach(el=>revealIO.observe(el));
+    }
+  }
+  function validate(){
+    let first=null,ok=true;
+    $$('[data-err]').forEach(el=>setErr(el.dataset.err,''));
+    const fail=(key,msg)=>{setErr(key,msg);ok=false;if(!first)first=key;};
+    if(!REQUIRED_DONE.firstName())fail('firstName','Please enter your name.');
+    if(!REQUIRED_DONE.lastName())fail('lastName','Please enter your surname.');
+    if(!REQUIRED_DONE.email())fail('email','Please enter a valid email address.');
+    if(!checked('role').length)fail('role','Please choose one option.');
+    else if(isOther()&&!$('#roleOther').value.trim())fail('roleOther','Please specify your role.');
+    ['field','coding','ai','cloud','days'].forEach(k=>{if(!REQUIRED_DONE[k]())fail(k,'Please choose one option.');});
+    if(!REQUIRED_DONE.excite())fail('excite','Choose between one and three options.');
+    if(!REQUIRED_DONE.laptop())fail('laptop','A personal laptop is mandatory to attend the practical sessions.');
+    if(!REQUIRED_DONE.terms())fail('terms','Please accept the terms to continue.');
+    if(!REQUIRED_DONE.photo())fail('photo','Consent is required to register.');
+    if(first){const el=document.getElementById(first)||$(`input[name="${first}"]`);if(el){el.closest('.section').classList.add('in');el.scrollIntoView({behavior:scrollMode(),block:'center'});el.focus({preventScroll:true});}}
+    return ok;
+  }
+  function collect(){
+    if(!pendingId)pendingId='CM26-'+Date.now().toString(36).toUpperCase()+'-'+Math.random().toString(36).slice(2,7).toUpperCase();
+    return{
+      registrationId:pendingId,submittedAt:new Date().toISOString(),
+      firstName:$('#firstName').value.trim(),lastName:$('#lastName').value.trim(),
+      fullName:($('#firstName').value.trim()+' '+$('#lastName').value.trim()).trim(),email:$('#email').value.trim(),
+      role:isOther()?'Other: '+$('#roleOther').value.trim():checked('role').join('; '),
+      field:checked('field').join('; '),coding:checked('coding').join('; '),aiExperience:checked('ai').join('; '),cloudExperience:checked('cloud').join('; '),
+      excites:checked('excite').join('; '),challenge:$('#challenge').value.trim(),laptop:checked('laptop').join('; '),days:checked('days').join('; '),notes:$('#notes').value.trim(),consentTerms:$('#terms').checked?'Yes':'No',consentPhoto:$('#photo').checked?'Yes':'No'
+    };
+  }
+  function toCsv(data){
+    const headers=Object.keys(data);
+    const esc=v=>{let text=String(v??'');if(/^[\s\uFEFF]*[=+@-]/.test(text)||/^[\t\r\n]/.test(text))text="'"+text;return '"'+text.replace(/"/g,'""')+'"';};
+    return '\uFEFF'+headers.join(',')+'\r\n'+headers.map(h=>esc(data[h])).join(',')+'\r\n';
+  }
+  $('#regForm').addEventListener('submit',async e=>{
+    e.preventDefault();if(busy)return;
+    const status=$('#status'),btn=$('#submitBtn');
+    if(!validate()){status.textContent='Please complete the highlighted fields.';status.className='status error';return;}
+    const data=collect();lastData=data;busy=true;status.className='status';status.textContent=live?'Sending your registration request…':'Preparing preview…';btn.disabled=true;btn.textContent=live?'Submitting…':'Preparing preview…';
+    $('#regForm').setAttribute('aria-busy','true');
+    const controls=$$('#regForm input, #regForm textarea');const oldDisabled=controls.map(el=>el.disabled);controls.forEach(el=>el.disabled=true);
+    let timeout=null;
+    try{
+      if(live){
+        if(!GOOGLE_FORM_ACTION.startsWith('https://docs.google.com/forms/d/e/')||Object.values(GOOGLE_FORM_ENTRIES).some(id=>!/^entry\.\d+$/.test(id)))throw new Error('Invalid registration configuration');
+        const params=new URLSearchParams();
+        // Each Google Form field is text: send one value per question.
+        // collect() already joins selected interests with semicolons.
+        Object.entries(GOOGLE_FORM_ENTRIES).forEach(([key,entryId])=>params.append(entryId,data[key]??''));
+        const controller=new AbortController();timeout=setTimeout(()=>controller.abort(),25000);
+        await fetch(GOOGLE_FORM_ACTION,{method:'POST',mode:'no-cors',credentials:'omit',body:params,signal:controller.signal});
+        // The opaque response cannot confirm acceptance or storage.
+      }
+      $('#regForm').hidden=true;
+      $('#resultTitle').textContent=live?'Registration request sent':'Preview complete — nothing sent';
+      $('#resultMessage').textContent=live?'Your browser has sent a registration request. This page cannot verify that Google accepted or saved it. Your registration is not confirmed here; please await confirmation from the organisers. Keep a copy of your answers and remember to bring your own laptop.':'The form passed its checks. This was a preview only: no answers were sent to Google and you are not registered. Publish this page on GitHub Pages, then submit a test and check the Google Form Responses tab.';
+      $('#regId').textContent=(live?'Registration ID: ':'Preview ID: ')+data.registrationId;
+      $('#backToForm').hidden=live;const s=$('#success');s.classList.add('show');s.scrollIntoView({behavior:scrollMode(),block:'center'});s.focus({preventScroll:true});
+    }catch(err){status.textContent='The request could not be completed. It may still have reached Google. Check with the organisers before retrying to avoid a duplicate registration.';status.className='status error';}
+    finally{clearTimeout(timeout);busy=false;controls.forEach((el,i)=>el.disabled=oldDisabled[i]);btn.disabled=false;btn.textContent=live?'Submit registration':'Try preview submission';$('#regForm').setAttribute('aria-busy','false');}
+  });
+  $('#backToForm').addEventListener('click',()=>{$('#success').classList.remove('show');$('#regForm').hidden=false;updateProgress();$('#submitBtn').focus();});
+  $('#downloadCsv').addEventListener('click',()=>{
+    if(!lastData)return;
+    const blob=new Blob([toCsv(lastData)],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+    a.href=url;a.download=lastData.registrationId+'.csv';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  });
+})();
+</script>
+</body>
+</html>
